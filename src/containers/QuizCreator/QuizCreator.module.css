@@ -4,13 +4,8 @@
   padding-top: 50px;
   flex-grow: 1;
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 254, 255, 1) 0%,
-    rgba(254, 237, 122, 1) 32%,
-    rgba(249, 237, 125, 1) 56%,
-    rgba(224, 239, 138, 1) 66%
-  );
+  background: #e2e2e2;
+  color: #385a64;
 }
 
 .QuizCreator > div {
@@ -19,13 +14,27 @@
   padding: 0 20px;
 }
 
-.QuizCreator ul {
+.QuizCreator h1 {
   text-align: center;
 }
 
 .QuizCreator form {
-  background: #eee;
-  border-radius: 5px;
+  border: 1px solid #385a64;
+  border-radius: 20px;
   padding: 15px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.QuizCreator input {
+  height: 40px;
+  border-radius: 10px;
+}
+
+.QuizCreator button {
+  text-align: center;
+  border-radius: 10px;
+}
+
+.QuizCreator button:active {
+  transform: scale(1.1);
+  transition-duration: 300ms;
 }

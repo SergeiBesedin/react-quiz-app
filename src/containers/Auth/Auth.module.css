@@ -1,45 +1,46 @@
 .Auth {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
   justify-content: center;
-  flex-grow: 1;
-  width: 100%;
-  background: #ececec;
-}
-
-.BackgroundPicture {
-  background: #fff;
-  grid-column: 1;
-  text-align: center;
-}
-
-.BackgroundPicture img {
-  width: 900px;
-}
-
-.LogIn {
-  grid-column: 2;
-  width: 100%;
-  max-width: 600px;
-  padding: 200px 20px;
-}
-
-.AuthForm {
-  padding: 0 40px;
+  align-items: center;
   color: #385a64;
 }
 
-.LogIn .AuthForm input {
-  width: 380px;
-  height: 55px;
-  border-radius: 15px;
-  margin-bottom: 30px;
-  border: none;
+.Auth form {
+  margin-bottom: 100px;
 }
 
-.LogIn .AuthForm button {
-  text-align: center;
-  padding: 15px;
-  font-size: 15px;
+.Auth input {
+  max-height: 40px;
   border-radius: 15px;
+}
+
+.Auth input:focus {
+  box-shadow: 1px 1px 4px #ff530f;
+}
+
+.Auth button {
+  border-radius: 20px;
+}
+
+.Auth button:active {
+  transform: scale(1.1);
+  transition-duration: 300ms;
+}
+
+@media screen and (max-width: 1300px) {
+  .Auth img {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Auth {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Auth img {
+    width: 400px;
+  }
 }

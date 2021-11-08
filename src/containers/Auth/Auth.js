@@ -1,10 +1,10 @@
-import React from "react";
-import classes from "./Auth.module.css";
-import Button from "../../components/UI/Buttons/Button";
-import Input from "../../components/UI/Input/Input";
-import { connect } from "react-redux";
-import { auth } from "./../../redux/actions/actionAuth";
-import authBackground from "../../assets/Auth/auth.background.jpg";
+import React from 'react';
+import classes from './Auth.module.css';
+import Button from '../../components/UI/Buttons/Button';
+import Input from '../../components/UI/Input/Input';
+import { connect } from 'react-redux';
+import { auth } from './../../redux/actions/actionAuth';
+import authBackground from '../../assets/Auth/auth.background.jpg';
 
 function validateEmail(email) {
   const re =
@@ -16,10 +16,10 @@ class Auth extends React.Component {
     isFormValid: false,
     formControls: {
       email: {
-        value: "",
-        type: "email",
-        label: "Email",
-        errorMessage: "Введите корректный адрес электронной почты",
+        value: '',
+        type: 'email',
+        label: 'Email',
+        errorMessage: 'Введите корректный адрес электронной почты',
         valid: false,
         touched: false,
         validation: {
@@ -28,10 +28,10 @@ class Auth extends React.Component {
         },
       },
       password: {
-        value: "",
-        type: "password",
-        label: "Пароль",
-        errorMessage: "Введите корректный пароль",
+        value: '',
+        type: 'password',
+        label: 'Пароль',
+        errorMessage: 'Введите корректный пароль',
         valid: false,
         touched: false,
         validation: {
@@ -65,7 +65,7 @@ class Auth extends React.Component {
     }
     let isValid = true;
     if (validation.required) {
-      isValid = value.trim() !== "" && isValid;
+      isValid = value.trim() !== '' && isValid;
     }
     if (validation.email) {
       isValid = validateEmail(value) && isValid;
@@ -111,13 +111,13 @@ class Auth extends React.Component {
   render() {
     return (
       <div className={classes.Auth}>
-        <div className={classes.BackgroundPicture}>
-          <img src={authBackground} />
+        <div>
+          <img src={authBackground} img="auth image" />
         </div>
-        <div className={classes.LogIn}>
-          <div className={classes.AuthForm}>
+        <div>
+          <div>
             <h1>Авторизация</h1>
-            <form onSubmit={this.submitHandler}>
+            <form>
               {this.renderInputs()}
               <Button
                 type="success"
@@ -130,7 +130,6 @@ class Auth extends React.Component {
                 type="primary"
                 onClick={this.registerHandler}
                 disabled={!this.state.isFormValid}
-                className={classes.BtnRegistration}
               >
                 Зарегистрироваться
               </Button>
