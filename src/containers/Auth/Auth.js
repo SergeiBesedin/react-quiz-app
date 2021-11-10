@@ -116,8 +116,8 @@ class Auth extends React.Component {
         </div>
         <div>
           <div>
-            <h1>Авторизация</h1>
             <form>
+              <h1>Авторизация</h1>
               {this.renderInputs()}
               <Button
                 type="success"
